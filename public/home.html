@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vibron</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Spline+Sans:wght@400;500;700&amp;family=Poppins:wght@300;400;500" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="/v.ico" rel="icon" type="image/x-icon"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7f13ec",
+            "background-light": "#f7f6f8",
+            "background-dark": "#191022",
+          },
+          fontFamily: {
+            "display": ["Spline Sans"],
+            "sans": ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          animation: {
+            'pulse-subtle': 'pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'wave-1': 'wave 15s linear infinite',
+            'wave-2': 'wave 20s linear infinite',
+            'wave-3': 'wave 25s linear infinite',
+          },
+          keyframes: {
+            'pulse-subtle': {
+              '0%, 100%': {
+                opacity: '1'
+              },
+              '50%': {
+                opacity: '.8'
+              },
+            },
+            'wave': {
+              '0%': {
+                transform: 'translateX(-50%) translateY(-20%) rotate(0deg)'
+              },
+              '100%': {
+                transform: 'translateX(-50%) translateY(-20%) rotate(360deg)'
+              },
+            }
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Spline Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<div class="absolute top-0 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/4 bg-primary/20 dark:bg-primary/30 rounded-full blur-3xl animate-wave-1 opacity-50 dark:opacity-30"></div>
+<div class="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/4 bg-purple-400/20 dark:bg-purple-500/30 rounded-full blur-3xl animate-wave-2 opacity-50 dark:opacity-30"></div>
+<div class="absolute top-0 left-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/4 bg-indigo-400/20 dark:bg-indigo-500/30 rounded-full blur-3xl animate-wave-3 opacity-50 dark:opacity-30"></div>
+<header class="relative z-10 flex items-center justify-between whitespace-nowrap border-b border-gray-200/50 dark:border-gray-800/50 px-6 sm:px-10 py-4">
+<div class="flex-1"></div>
+<div class="flex flex-1 items-center justify-center gap-3"><!--
+<img alt="Vibron icon" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwFVXlb1-QAIW5TQySkB9IcQLZ05EsDlN34OjePdLis2pCw92q-iUYVaAOoq87_S14ANY2is6WH6zUaeMKuiQrfa_dENOj7wtXAybOFpyuectsBaoVY0jQBmwmDVUkx77YtiN2i4zxckVr5R70CbdGz5vO5AEhX2j8l12nQoefZxfpm8rGGTP3q1Bvj7m6M3xMNenL2a578Ss2o1wKaocoGT8rBijp2a5N-s2hP08FpGUXwXetAZNukf4F9yo3wV7bcDbQsGcPSwMD"/>
+<span class="text-xl font-semibold text-gray-900 dark:text-white">Vibron</span>-->
+</div>
+<div class="flex flex-1 items-center justify-end gap-4">
+<button class="hidden sm:flex items-center justify-center rounded-full h-10 w-10 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"></path>
+</svg>
+</button>
+<div class="w-10 h-10 bg-center bg-no-repeat bg-cover rounded-full" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDptM0Ym_9vSsJNvZ6Kg0NkZiyHebfJCLUvYlpu1AjdIVMnWzMA8krenXxldwRl5Gkunm8x2uPhs5QTLnQN1Sm8pvflxK_zC9KvnjXDbpX5XTMub-y5WzPCD7CsJazZUAGa7Qw-9WJtH1T06D9MV6MWfuiagyzDp6EelLotX1K6jkmyKWb5uSV49yXrANHbBNgHwQtT8-5w7l_hAxB6rcp3Se5X0v6V8eugSFv7Zcxktctl-oLtgMiu4Skb1TRbEf9O7arp7pBmznn8");'></div>
+</div>
+</header>
+<main class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6">
+<div class="w-full max-w-md space-y-8">
+<div class="flex flex-col items-center justify-center space-y-4">
+<div class="flex items-center gap-4">
+<img alt="Vibron icon" class="h-6 w-4 sm:h-20 sm:w-20" src="v.ico"/>
+<h1 class="text-6xl sm:text-7xl font-bold text-gray-900 dark:text-white animate-pulse-subtle [text-shadow:0_20px_8px_rgba(0,0,0,0.1)] dark:[text-shadow:0_20	px_15px_rgba(0,0,0,0.3)]">Vibron</h1>  
+</div>
+<h2 class="text-3xl sm:text-4xl font-sans font-light text-gray-700 dark:text-gray-300 tracking-wide whitespace-nowrap">How are you feeling today?</h2>
+<p class="text-base text-gray-500 dark:text-gray-400">Choose a player that matches your vibe.</p>
+</div>
+<div class="space-y-4">
+<a class="group block" href="mood.html">
+<div class="relative flex items-center justify-center w-full h-32 sm:h-40 bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+<span class="text-xl sm:text-2xl font-bold text-primary group-hover:text-white relative z-10 transition-colors duration-300">Mood-Based Player</span>
+</div>
+</a>
+<a class="group block" href="normal.html">
+<div class="relative flex items-center justify-center w-full h-32 sm:h-40 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+<div class="absolute inset-0 bg-gray-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+<span class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white relative z-10 transition-colors duration-300">Normal Player</span>
+</div>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>
